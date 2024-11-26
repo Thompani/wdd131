@@ -1,0 +1,193 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Sansita", sans-serif;
+}
+
+/* mobile **************************/
+header {
+	background-color: #bbb;
+	display: grid;
+	grid-gap: 1rem;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 30px #333;
+}
+
+header,
+main {
+	margin: 0 auto;
+}
+/* small view navigation */
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❌";
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	list-style: none;
+	background-color: #333;
+	color: #fff;
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+.navigation a:hover {
+	background-color: #bbb;
+	color: #333;
+	font-weight: 700;
+}
+.open a {
+	display: block;
+}
+main {
+	margin: 0 auto;
+    border: 2px solid rgba(0,0,0,.3);
+}
+h1 {
+	font-size: 2rem;
+}
+
+nav {
+	background-color: #36454f;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+}
+
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+	font-size: larger;
+}
+
+nav a:hover {
+	text-decoration: underline double;
+	background-color: #eee;
+	color: #000;
+}
+
+.active {
+	color: yellow;
+}
+.stdlf {
+	max-width: auto;
+	font-weight: 700;
+    border-bottom: 1px solid #777;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-decoration: #777;
+}
+
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+     color: darkgreen;
+}
+section {
+    margin: 1rem auto; 
+    max-width: 960px; 
+    padding: .5rem;
+}
+.container {
+    display:grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-gap: 25px;
+    place-items: center;
+}
+
+figure {
+    background-color:#fff;
+}
+img { 
+    width: 100%;
+     height: auto; 
+     margin: .5rem;
+    }
+figcaption {
+    font-size: smaller;
+    text-align: center;
+}
+
+
+.yigoTem{
+    border: 1px solid rgba(0,0,0,.3);
+	padding: 1px;
+}
+
+.wasTem {
+	border: 1px solid rgba(0,0,0,.3);
+	padding: 1px;
+}
+
+.nedTem {
+	border: 1px solid rgba(0,0,0,.3);
+	padding: 1px;
+}
+
+.mosaic {
+	position: relative;
+	width: 90%;
+
+}
+
+.mosaic img {
+	width: 100%;
+	margin: 0;
+}
+
+  footer {
+    background-color: lightsteelblue; 
+    color: black; 
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 30px slateblue;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: black;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: dodgerblue;
+	text-decoration: underline; 
+}
+
