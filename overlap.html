@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Background Image</title>
+    <style>
+        /* Make sure the html and body take up the full height of the viewport */
+        html, body {
+            height: 100%;  /* Full height */
+            margin: 0;     /* Remove default margin */
+            padding: 0;    /* Remove default padding */
+        }
+
+        /* Set the background image on the html element */
+        html {
+            background-image: url('https://byui-cse.github.io/wdd131-ww-course/images/place-lg-1160.png');  /* Replace with your image URL */
+            background-size: cover;  /* Ensure the image covers the entire page */
+            background-position: center;  /* Center the image */
+            background-attachment: fixed;  /* Fix the image during scrolling */
+        }
+
+        /* Optionally, style the body for content */
+        body {
+            display: flex; /* Flexbox to center content */
+            justify-content: center;  /* Center content horizontally */
+            align-items: center;      /* Center content vertically */
+            height: 100%;  /* Full height of the page */
+            text-align: center;  /* Center text */
+            color: white;   /* White text for contrast */
+            font-family: Arial, sans-serif;  /* Font styling */
+        }
+
+        /* Styling for content container */
+        .content {
+            background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background for readability */
+            padding: 20px;
+            border-radius: 10px;  /* Rounded corners */
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .content p {
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content displayed on top of the background image -->
+    <div class="content">
+        <h1>Welcome to My Webpage</h1>
+        <p>This webpage uses an image as the main background (applied to the `html` element).</p>
+    </div>
+</body>
+</html>
