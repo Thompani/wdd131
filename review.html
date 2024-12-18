@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Aniekan Thompson</title>
+    <meta name="author" content="Aniekan Thompson" />
+    <meta name="description" content="The WDD 131 - Dynamic Web Fundamentals is designed to introduce students to web development." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <link href="form-normalize.css" rel="stylesheet">
+    <link href="form-small.css" rel="stylesheet">
+    <link href="form-medium.css" rel="stylesheet">
+    <link href="form-large.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Customer Product Review</h1>
+    </header>
+
+    <main>
+        <h2>Thank you for submitting your review!</h2>
+        <p>You have submitted <span id="reviewCount">0</span> review(s) so far.</p>
+    </main>
+    
+    <!-- FOOTER HERE -->   
+    <footer>
+        &copy;<span id="year"></span> | Aniekan Thompson <span class="brk1"></span><span class="unBrk1">|</span> BYU IDAHO | <a href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a><br>
+        <span id="updated"></span>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="getdates.js"></script>
+
+    <!-- Link to the external JS file -->
+    <script src="reviewCounter.js"></script> <!-- This is your external JavaScript file -->
+    <script src="form.js"></script>
+</body>
+</html>
