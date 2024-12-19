@@ -80,7 +80,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // Retrieve the submission count for today's date from localStorage
     let submissionCount = localStorage.getItem(submissionDate);
     if (submissionCount === null) {
-      submissionCount = 0; // Default to 0 if no submissions exist for today
+      submissionCount = 1; // Default to 0 if no submissions exist for today
     }
 
     // Display the submission count in the review page
