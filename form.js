@@ -1,5 +1,9 @@
 // Get today's date in YYYY-MM-DD format
 const submissionDate = new Date().toISOString().split('T')[0]; 
+
+// Retrieve the user's name (if entered) to uniquely identify submissions
+const userName = localStorage.getItem('userName') || 'Anonymous';  // Default to 'Anonymous' if no name is provided
+
 // List of products to populate the select options
 const products = [
   {
@@ -56,35 +60,35 @@ window.addEventListener('DOMContentLoaded', function() {
       // Prevent form submission to keep user on the page for demo purposes
       event.preventDefault();
 
-      // Retrieve the current submission count for today's date from localStorage
-      let submissionCount = localStorage.getItem(submissionDate);
-      if (submissionCount === null) {
-        submissionCount = 0; // Initialize count if no count exists for today
+      // Retrieve the submission count for the specific user
+      let userSubmissionCount = localStorage.getItem(userName);
+      if (userSubmissionCount === null) {
+        userSubmissionCount = 0; 
       } else {
-        submissionCount = parseInt(submissionCount); // Convert count to an integer
+        userSubmissionCount = parseInt(userSubmissionCount); // Convert count to an integer
       }
 
-      // Increment the submission count for today
-      submissionCount += 1;
+      // Increment the submission count for the user
+      userSubmissionCount += 1;
 
-      // Store the updated submission count for today in localStorage
-      localStorage.setItem(submissionDate, submissionCount);
+      // Store the updated submission count for the user in localStorage
+      localStorage.setItem(userName, userSubmissionCount);
 
       // After updating the submission count, navigate to the review page
-      window.location.href = "review.html";  // Go to review page
+      window.location.href = "review.html";  
     });
   }
 
   // If the user is on the review page
   if (reviewCountSpan) {
-    // Retrieve the submission count for today's date from localStorage
-    let submissionCount = localStorage.getItem(submissionDate);
-    if (submissionCount === null) {
-      submissionCount = 1; // Default to 0 if no submissions exist for today
+    // Retrieve the user's submission count from localStorage
+    let userSubmissionCount = localStorage.getItem(userName);
+    if (userSubmissionCount === null) {
+      userSubmissionCount = 0; 
     }
 
     // Display the submission count in the review page
-    reviewCountSpan.textContent = submissionCount; 
+    reviewCountSpan.textContent = userSubmissionCount; 
   }
 
   // Display the current year and last updated timestamp
